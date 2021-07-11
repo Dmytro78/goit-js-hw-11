@@ -1,0 +1,41 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: block;
+  text-align: center;
+  background-color: #23f0c8;
+}
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  display: block;
+}
+.value {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  color: tomato;
+  margin: 5px;
+  padding: 5px;
+  background-color: #1327ea;
+  border-top: solid 11 px #ea2413;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  line-height: 1;
+  border-radius: 50%;
+}
+
+click {
+  margin-top: 150px;
+  font-size: 100px;
+}
