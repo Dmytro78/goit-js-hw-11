@@ -1,0 +1,14 @@
+.btns {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  overflow: auto;
+}
+.btn {
+  border-radius: 50%;
+  border-color: blue;
+  border-style: dotted;
+  border-radius: 15px;
+  background-color: #23f0c8;
+  font-size: xx-large;
+}

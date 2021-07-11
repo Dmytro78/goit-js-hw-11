@@ -1,14 +1,15 @@
-import '../css/common.css';
+// import '../css/color-switcher.css';
 
 const refs = {
+    body: document.body,
     btnStart: document.querySelector('[data-start]'),
     btnStop: document.querySelector('[data-stop]'),
 };
 
 const INTERVAL_DELAY = 1000;
-let intervalId = null;
+let timerId;
 
-refs.btnStart.addEventListener('click', changeColor);
+refs.btnStart.addEventListener('click', onBtnStart);
 refs.btnStop.addEventListener('click', onBtnStop);
 
 function getRandomHexColor() {
@@ -16,13 +17,17 @@ function getRandomHexColor() {
 }
 
 function changeColor() {
-    intervalId = setInterval(() => {
-        refs.body.style.backgroundColor = getRandomHexColor();
-    }, INTERVAL_DELAY);
+     refs.body.style.backgroundColor = getRandomHexColor();
+    
+}
+
+function onBtnStart() {
     refs.btnStart.disabled = true;
+    return (timerId = setInterval(changeColor, INTERVAL_DELAY));
 }
 
 function onBtnStop() {
-    clearInterval(intervalId);
+    clearInterval(timerId);
+    timerId = 0;
     refs.btnStart.disabled = false;
 }
